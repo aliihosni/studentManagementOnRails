@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  justif: MyString
+  date: 2017-11-23
+  student_id: 1
+  cour_id: 1
+
+two:
+  status: 1
+  justif: MyString
+  date: 2017-11-23
+  student_id: 1
+  cour_id: 1

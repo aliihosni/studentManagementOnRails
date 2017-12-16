@@ -1,0 +1,42 @@
+<%= form_with(model: absence, local: true) do |form| %>
+  <% if absence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(absence.errors.count, "error") %> prohibited this absence from being saved:</h2>
+
+      <ul>
+      <% absence.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status, id: :absence_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :justif %>
+    <%= form.text_field :justif, id: :absence_justif %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :absence_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_id %>
+    <%= form.number_field :student_id, id: :absence_student_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cour_id %>
+    <%= form.number_field :cour_id, id: :absence_cour_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
